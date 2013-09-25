@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130913103447) do
+ActiveRecord::Schema.define(:version => 20130919164743) do
 
   create_table "batch_invitation_users", :force => true do |t|
     t.integer  "batch_invitation_id"
@@ -99,6 +99,7 @@ ActiveRecord::Schema.define(:version => 20130913103447) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "last_synced_at"
+    t.boolean  "signin_permission", :default => false
   end
 
   add_index "permissions", ["application_id", "user_id"], :name => "unique_permission_constraint", :unique => true
